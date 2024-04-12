@@ -1,14 +1,15 @@
-This Python script utilizes `yt-dlp`, a command-line program to enable users to download videos from YouTube in their preferred format. The script provides a simple interface where users can input a YouTube video link, then displays all available download formats for that video, including details such as format code, file extension, resolution, and any additional notes related to the format. Users can then select their desired format code to initiate the download process. The video is saved in the same directory as the script, with the filename including the video title and chosen format code. This tool is especially useful for those looking to download videos for offline viewing, archival purposes, or content creation, offering flexibility in terms of video quality and format.
+This Python script leverages `yt-dlp`, a powerful command-line tool, to facilitate the downloading of YouTube videos in various formats. With an intuitive interface, the script prompts users to provide a YouTube video URL and then displays a comprehensive list of all available download formats. These formats encompass essential details such as format code, file extension, resolution, bitrate, frames per second, and both video and audio codecs, alongside any pertinent notes regarding the format. In an enhancement to its functionality, users now have the flexibility to select not just one but two format codes simultaneously, enabling the download of two different versions of a video at once. This feature significantly benefits users who require videos in multiple formats for diverse applications, including offline viewing, content archiving, or multimedia projects. The downloaded videos are conveniently saved in the script's directory, with filenames that incorporate the video title and the selected format codes, thereby simplifying file management and retrieval.
 
 ### Features:
-- **Easy to Use**: Just run the script, input a YouTube video URL, and choose your desired format.
-- **Flexible Download Options**: Lists all available formats, including resolutions and file types, allowing for a customized download experience.
-- **Convenient File Naming**: Saves videos with a filename that includes the video title and selected format code, making files easy to identify.
+- **User-Friendly Interface**: Simple execution flow, guiding users from URL input to downloading with ease.
+- **Enhanced Download Capabilities**: Offers the ability to download videos in two different formats simultaneously, catering to varied user needs.
+- **Detailed Format Information**: Provides exhaustive details on available video formats, including technical specifications like bitrate and codecs.
+- **Automated File Naming**: Automatically names downloads incorporating video titles and format codes, facilitating easy identification and organization.
 
 ### How to Use:
-1. Ensure you have Python installed on your system.
-2. Install `yt-dlp` using pip: `pip install yt-dlp`.
-3. Run the script: `python download_youtube_video.py`.
-4. Follow the on-screen prompts to enter a YouTube video link and select a download format.
+1. Ensure Python is installed on your computer.
+2. Use pip to install `yt-dlp`: run `pip install yt-dlp` in your terminal.
+3. Execute the script by running `python download_youtube_video.py` from your command line.
+4. When prompted, paste the URL of the YouTube video you wish to download and enter the format codes for your desired formats when requested.
 
-This script is meant for educational purposes and personal use. Users are responsible for adhering to YouTube's terms of service and copyright laws regarding content downloading.
+This tool has been developed for educational and personal use. It is imperative that users respect YouTube's terms of service and adhere to copyright regulations when downloading content.
