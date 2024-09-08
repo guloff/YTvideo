@@ -1,15 +1,75 @@
-This Python script leverages `yt-dlp`, a powerful command-line tool, to facilitate the downloading of YouTube videos in various formats. With an intuitive interface, the script prompts users to provide a YouTube video URL and then displays a comprehensive list of all available download formats. These formats encompass essential details such as format code, file extension, resolution, bitrate, frames per second, and both video and audio codecs, alongside any pertinent notes regarding the format. In an enhancement to its functionality, users now have the flexibility to select not just one but two format codes simultaneously, enabling the download of two different versions of a video at once. This feature significantly benefits users who require videos in multiple formats for diverse applications, including offline viewing, content archiving, or multimedia projects. The downloaded videos are conveniently saved in the script's directory, with filenames that incorporate the video title and the selected format codes, thereby simplifying file management and retrieval.
+# YouTube Video Downloader using yt-dlp
 
-### Features:
-- **User-Friendly Interface**: Simple execution flow, guiding users from URL input to downloading with ease.
-- **Enhanced Download Capabilities**: Offers the ability to download videos in two different formats simultaneously, catering to varied user needs.
-- **Detailed Format Information**: Provides exhaustive details on available video formats, including technical specifications like bitrate and codecs.
-- **Automated File Naming**: Automatically names downloads incorporating video titles and format codes, facilitating easy identification and organization.
+## Description
 
-### How to Use:
-1. Ensure Python is installed on your computer.
-2. Use pip to install `yt-dlp`: run `pip install yt-dlp` in your terminal.
-3. Execute the script by running `python download_youtube_video.py` from your command line.
-4. When prompted, paste the URL of the YouTube video you wish to download and enter the format codes for your desired formats when requested.
+This Python script allows you to list available formats for a YouTube video and download the video in the selected formats using the `yt-dlp` library. The script lists various details about the available formats, such as video resolution, bitrate, frame rate (FPS), and codecs, and then downloads the video in two user-specified formats.
 
-This tool has been developed for educational and personal use. It is imperative that users respect YouTube's terms of service and adhere to copyright regulations when downloading content.
+## Features
+
+- **List Available Formats**: The script retrieves and displays the available video formats, including format code, resolution, audio bitrate, frame rate (FPS), and codecs.
+- **Download in Multiple Formats**: Users can download a video in two different formats by specifying the format codes.
+- **Flexible Output**: The downloaded files are saved with a naming convention that includes the video title and format code.
+
+## Requirements
+
+- **Python 3.6+**
+- **yt-dlp**: A command-line tool and Python library for downloading videos from YouTube and other video platforms.
+
+### Installation of Dependencies
+
+To install the `yt-dlp` library, run the following command:
+
+```bash
+pip install yt-dlp
+```
+
+## Usage
+
+1. **Clone the repository** or copy the script file to your local machine.
+   
+2. **Run the script**:
+   
+   ```bash
+   python downloader.py
+   ```
+
+3. **Input the YouTube video URL** when prompted:
+
+   ```bash
+   Enter the URL of a YouTube video: https://www.youtube.com/watch?v=example
+   ```
+
+4. The script will display a list of available formats. You need to specify two format codes to download:
+
+   ```bash
+   Enter two desired format codes to download the video (e.g., '22,18'): 22,18
+   ```
+
+5. The script will download the video in both formats and save the files to the current directory.
+
+### Example
+
+```bash
+Enter the URL of a YouTube video: https://www.youtube.com/watch?v=example
+Available formats:
+Format code: 22, Extension: mp4, Resolution: 720p, Bitrate: N/A kbps, FPS: 30, Video codec: avc1.64001F, Audio codec: mp4a.40.2, Note: 
+...
+Enter two desired format codes to download the video (e.g., '22,18'): 22,18
+Download completed successfully for format code: 22.
+Download completed successfully for format code: 18.
+```
+
+## Script Breakdown
+
+- **`list_formats(url)`**: Extracts and lists the available formats for a given YouTube video URL, displaying details such as format code, extension, resolution, bitrate, FPS, and codecs.
+  
+- **`download_video(url, format_codes)`**: Downloads the video in the specified formats. The files are saved in the current directory, with filenames that include the video title and format code.
+
+## Notes
+
+- Ensure that you have an active internet connection while using this script, as it relies on the YouTube platform to fetch video details and download videos.
+- The script is designed to download videos in two different formats, but it can be easily modified to handle more formats.
+
+## License
+
+This project is licensed under the MIT License.
